@@ -1,0 +1,178 @@
+Got it 👍
+Below is the **FULL, READY-TO-USE PPT CONTENT WRITTEN OUT** so you can **review, edit, and approve** before anything is finalized.
+This is **exactly what should appear on each slide**.
+No files. No assumptions. Just content.
+
+You can copy-paste this directly into PowerPoint or Google Slides.
+
+---
+
+# **Slide 1 – Title**
+
+**Document AI to AI_EXTRACT Transition**
+**PenFed Credit Union | Snowflake Platform Update**
+
+Presenter: *Your Name*
+Role: Senior Data Scientist / Architect
+Date: *Date*
+
+---
+
+# **Slide 2 – Context**
+
+* PenFed uses Snowflake as the primary analytics and data platform
+* Document processing is a core capability across multiple workflows
+* Snowflake is evolving its document AI platform
+* This session provides awareness and technical direction
+
+---
+
+# **Slide 3 – What Is Happening**
+
+* Snowflake is **deprecating the Document AI Model Build UI**
+* Customers are encouraged to use **AI_EXTRACT** for new document extraction use cases
+* AI_EXTRACT is powered by **arctic-extract**
+* Customer announcement date: **November 26, 2025**
+* Deprecation date: **February 28, 2026**
+
+---
+
+# **Slide 4 – Business Continuity**
+
+* All existing **published and trained Document AI models** continue to run
+* Models stored in the **Snowflake Model Registry** remain supported
+* No immediate disruption to production workloads
+* Migration can be planned and executed incrementally
+
+---
+
+# **Slide 5 – Why This Change (The Model)**
+
+AI_EXTRACT is powered by Snowflake’s **best-in-class extraction model: arctic-extract**
+
+* Higher accuracy and faster inference performance
+* Expanded multilingual document support
+* Vision-based modeling for full document context
+* Feature parity: entities, lists, tables, checkboxes, multi-page extraction
+* Longer output token limits for tabular extraction
+* Single inference call for entity, list, and table extraction
+* Continued investment in new model versions
+
+---
+
+# **Slide 6 – Why This Change (New Capabilities)**
+
+AI_EXTRACT enables **programmatic access** for document extraction
+
+* SQL and Python APIs are **Generally Available**
+* Seamless integration into existing workflows and automation pipelines
+* Supports dynamic and multi-format documents (invoices, contracts, forms)
+* Enables **conditional extraction**
+* **Zero-copy inference** by referencing files in Snowflake or external stages
+* Supports **cross-region inference**
+
+---
+
+# **Slide 7 – Document AI (Previous Architecture)**
+
+* UI-driven **Model Build** experience
+* Documents, prompts, and annotations managed in the UI
+* Models published and stored in the **Model Registry**
+* Inference executed via Document AI APIs
+* Lifecycle separate from core Snowflake data pipelines
+
+---
+
+# **Slide 8 – AI_EXTRACT (New Architecture)**
+
+* Documents stored in Snowflake or external stages
+* AI_EXTRACT executed directly via SQL or Python
+* No dependency on a UI for production workflows
+* Results written directly to Snowflake tables
+* Unified security, governance, and monitoring
+
+---
+
+# **Slide 9 – What Happens to Existing Document AI Model Builds**
+
+* After **February 2026**, Document AI UI (Model Builds) will not be available
+* Customers can **export**:
+
+  * Files
+  * Prompts
+  * Annotations
+* Exported assets can be used to run **AI_EXTRACT**
+* Published models saved in the **Model Registry** continue to run
+* One-time migration required for models not in the registry
+
+---
+
+# **Slide 10 – API and Billing Changes**
+
+* Inference API changes:
+
+  * `DocAIModel.predict(file)`
+  * → `AI_EXTRACT(DocAIModel.file)`
+* New API returns a different response format
+* Inference scripts must be updated accordingly
+* Billing changes:
+
+  * From **GPU per hour**
+  * To **credits per million tokens**
+* Expanded **in-region availability** for inference
+
+---
+
+# **Slide 11 – Features Available Going Forward**
+
+* **AI_EXTRACT** – Generally Available
+* **Model Build Export** – Generally Available
+* **Cortex Fine-Tuning API** – In Preview
+* **Document Processing Playground** – For business and technical users
+
+---
+
+# **Slide 12 – Document Processing Playground (Pupr)**
+
+* Low-code / no-code document extraction evaluation
+* Designed for **technical and business users**
+* Natural language prompts without SQL or JSON upfront
+* Quickly test Snowflake AISQL document processing
+* Automatically generates production-ready code
+
+---
+
+# **Slide 13 – Arctic-Extract Fine-Tuning API (Preview)**
+
+* Programmatic end-to-end fine-tuning and deployment
+* Integrates with existing data ingestion and labeling workflows
+* Supports continuous model improvement and reduced drift
+* **Zero-copy fine-tuning** using Snowflake or external stages
+* Model Registry used for versioning and lineage
+* Currently available in **limited regions**
+
+---
+
+# **Slide 14 – Summary**
+
+* Snowflake is transitioning from UI-based Document AI to **AI_EXTRACT**
+* Existing models remain supported for business continuity
+* AI_EXTRACT aligns better with production data pipelines
+* Simplified architecture and improved governance
+* Recommended approach for all **new** document extraction use cases
+
+---
+
+# **Slide 15 – Q&A**
+
+---
+
+### Next step
+
+Please review this and tell me:
+
+* ✔ What you want **changed**
+* ✔ What feels **too much / too little**
+* ✔ Whether you want **speaker notes** added
+
+Once you approve the content, I will generate the final PPT exactly as you want it.
